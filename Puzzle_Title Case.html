@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example returns a new string with the text in 'title case'</title>
+  <body>
+    <script type="text/javascript">
+    function titleCase(str) {
+      if ((str===null) || (str===''))
+      return false;
+      else
+      str = str.toString();
+      return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    }
+    titleCase("Happy happy joy joy!!!");
+    console.log(titleCase("Happy happy joy joy!!!"));
+    </script>
+  </body>
+</head>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example Of Min and Max values of an Array</title>
+  <body>
+    <script type="text/javascript">
+    //Write a function that takes an array and returns the index of the smallest value.
+    var a =[1,4,-20,3,9,-7];
+    function minv(arr) {
+      var smallestId = 0;
+      var smallest = arr[0];
+      for (var i = 1; i < arr.length; i++)
+      {
+        if(arr[i] < smallest) {
+          smallest = arr[i];
+          smallestId = i;
+        }
+        console.log(smallest);
+
+      }
+      return smallestId;
+    }
+    console.log(minv(a));
+    </script>
+  </body>
+</head>
+</html>

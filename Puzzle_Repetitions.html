@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example of Reptitions</title>
+  <body>
+    <script type="text/javascript">
+    /*Write a function that takes a string and returns an object with
+    the character which is repeated most and the number of times it is
+    repeated. In the event of a tie, return all characters together in
+    one string. For example,  given the string "aabbbccdddeeff",
+    return the object {chars: "bd", count: 3}.
+    */
+
+    //}
+    function reptitions(str) {
+      var counts = {};
+      for (var i in str){
+        var ch = str[i];
+        if (ch in counts) {  //NOT for in
+          counts[ch]++;  // counts[ch] +1;
+        }else {
+          counts[ch] =1;
+        }
+      }
+      console.log(counts);
+      var max =0;
+      var maxChars = [];
+      for (var ch in counts){
+        if (counts[ch] > max) {
+          max = counts [ch];
+          maxChars = [ch];
+        } else if (counts[ch] ===max) {
+          maxChars.push[ch];
+        }
+      }
+      return {
+        chars: maxChars.join(''),
+        count: max
+      };
+    }
+    console.log(reptitions('ffewerjffjjjasfdii'));
+    </script>
+    </body>
+    </head>
+    </html>

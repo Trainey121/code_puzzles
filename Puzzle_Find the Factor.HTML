@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example of find the factors of an integer</title>
+  <body>
+    <script type="text/javascript">
+    /*
+    find the factors of an integer
+    Write a function that takes an integer and returns an array
+    of its factors (the other integers by which it's evenly divisible).
+    For example, given the integer 18, return the array [2, 3, 6, 9].
+    If the integer has no factors, return an empty array.
+    */
+    function factors(n)
+  {
+   var num_factors = [], i;
+
+   for (i = 1; i <= Math.floor(Math.sqrt(n)); i += 1)
+    if (n % i === 0)
+    {
+     num_factors.push(i);
+     if (n / i!== i)
+      num_factors.push(n / i);
+    }
+   num_factors.sort(function(x, y)
+     {
+       return x - y;});  // numeric sort
+       return num_factors;
+      }
+  console.log(factors(18));
+  </script>
+</body>
+</head>
+</html>
